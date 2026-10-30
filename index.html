@@ -21,31 +21,68 @@ a{color:#3D4027}a:hover{color:#5C5F38}
 @media (max-width:760px){.deco-pr{width:100% !important}.pr-branch{width:100% !important}.pr-vase{width:72% !important}.pad-pr{padding-bottom:330px !important}}
 .pad-ct{padding-top:clamp(240px,21vw,320px) !important}
 .pad-podhod{padding-top:clamp(250px,21vw,320px) !important;padding-bottom:clamp(270px,26vw,400px) !important}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:88px}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(43,45,28,.1)}
+.hdr-in{max-width:1360px;margin:0 auto;padding:0 32px;height:84px;display:flex;align-items:center;justify-content:space-between;gap:32px;box-sizing:border-box}
+.hdr-logo{display:flex;flex-direction:column;gap:2px;text-decoration:none;flex:0 0 auto}
+.hdr-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;line-height:1;color:#2B2D1C;letter-spacing:.01em}
+.hdr-sub{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#5F5A49}
+.hdr-nav{display:flex;gap:4px;align-items:center}
+.hdr-nav a{padding:10px 14px;border-radius:999px;font-size:14px;font-weight:500;color:#2B2D1C;text-decoration:none;transition:background .2s}
+.hdr-nav a:hover{background:#EEF2E6;color:#2B2D1C}
+.hdr-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.hdr-tg{width:48px;height:48px;border-radius:50%;border:1px solid rgba(43,45,28,.22);display:flex;align-items:center;justify-content:center;color:#2B2D1C}
+.hdr-tg:hover{background:#EEF2E6;color:#2B2D1C}
+.hdr-cta{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;background:#3D4027;color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none}
+.hdr-cta:hover{background:#2B2D1C;color:#FFFFFF}
+@media (max-width:1100px){.hdr-nav{display:none}}
+@media (max-width:760px){.hdr-in{height:68px;padding:0 16px;gap:12px}.hdr-name{font-size:22px}.hdr-sub{font-size:9px;letter-spacing:.18em}.hdr-tg{display:none}.hdr-cta{height:44px;padding:0 18px;font-size:13px}}
+.site-footer{background:#2B2D1C;color:#E9E6DC}
+.ftr-in{max-width:1360px;margin:0 auto;padding:88px 32px 32px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.3fr;gap:40px}
+.ftr-col{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.6}
+.ftr-col p{margin:0;color:#BFC0AE}
+.ftr-col a{color:#E9E6DC;text-decoration:none;overflow-wrap:anywhere}
+.ftr-col a:hover{color:#DCE3CC;text-decoration:underline}
+.ftr-h{font-size:12px !important;letter-spacing:.22em;text-transform:uppercase;color:#9EA08A !important;margin-bottom:4px !important}
+.ftr-lead{font-family:'Cormorant Garamond',serif;font-size:26px !important;line-height:1.25 !important;color:#E9E6DC !important;max-width:380px}
+.ftr-cta{align-self:flex-start;margin-top:12px;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#DCE3CC;color:#2B2D1C !important;font-weight:600;font-size:14px}
+.ftr-cta:hover{background:#FFFFFF;text-decoration:none !important}
+.ftr-word{margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,9.6vw,150px);line-height:.9;letter-spacing:-.01em;color:#DCE3CC;white-space:nowrap}
+.ftr-word em{font-style:italic;color:#9EA08A}
+.ftr-bottom{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(233,230,220,.18);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9EA08A}
+.ftr-bottom a{color:#BFC0AE}
+.ftr-bottom a:hover{color:#FFFFFF}
+@media (max-width:1000px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.ftr-in{padding:64px 16px 28px;gap:44px}.ftr-grid{grid-template-columns:1fr;gap:32px}.ftr-word{white-space:normal;font-size:clamp(52px,16vw,90px)}.ftr-bottom{flex-direction:column}}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 .hero-word{white-space:nowrap}.m-only{display:none}.tg{display:block}
-@media (max-width:760px){.hero-word{margin:0 !important;text-align:left !important;white-space:normal !important;transform:none !important}.m-only{display:inline}.hero-right-word,.hero-right>div{display:none !important}.hero-right{align-items:flex-start !important;text-align:left !important;gap:14px !important;padding-bottom:48px !important}.hero-right>p{max-width:none !important}.tg{display:inline}.tg+.tg::before{content:" · "}header>div{flex-wrap:nowrap !important;align-items:center !important}header nav{flex:0 0 auto !important}header nav:first-child{display:none !important}header a[href="#top"]{padding:12px 16px !important;align-items:flex-start !important}header a[href="#top"] span:first-child{font-size:20px !important}header nav a[href^="http"]{padding:14px 16px !important;margin-right:16px;border-radius:999px;font-size:12px !important}.nav-cell{display:none !important}.hero-photo{order:-1;width:50vw !important;margin:0 0 0 8vw !important}.hero-shadow{left:90% !important;height:76% !important}.hero-photo::after{content:"";position:absolute;left:-8vw;width:100vw;bottom:0;height:90px;z-index:2;background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}}
+@media (max-width:760px){.hero-word{margin:0 !important;text-align:left !important;white-space:normal !important;transform:none !important}.m-only{display:inline}.hero-right-word,.hero-right>div{display:none !important}.hero-right{align-items:flex-start !important;text-align:left !important;gap:14px !important;padding-bottom:48px !important}.hero-right>p{max-width:none !important}.tg{display:inline}.tg+.tg::before{content:" · "}.hero-photo{order:-1;width:50vw !important;margin:0 0 0 8vw !important}.hero-shadow{left:90% !important;height:76% !important}.hero-photo::after{content:"";position:absolute;left:-8vw;width:100vw;bottom:0;height:90px;z-index:2;background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}}
 </style>
 
 <div id="top" style="font-family: Manrope, system-ui, sans-serif; color: #2B2D1C; background: #FFFFFF; width: 100%; overflow-x: hidden">
 
 <!-- ШАПКА -->
-<header style="border-bottom: 1px solid rgba(43,45,28,0.12); background: #FFFFFF">
-<div style="max-width: 1360px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-between">
-<nav aria-label="Разделы слева" style="display: flex; flex-wrap: wrap; flex: 1 1 300px">
-<a class="nav-cell" href="#approach" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-right: 1px solid rgba(43,45,28,0.12)">Подход</a>
-<a class="nav-cell" href="#about" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-right: 1px solid rgba(43,45,28,0.12)">Обо мне</a>
-<a class="nav-cell" href="#requests" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-right: 1px solid rgba(43,45,28,0.12)">Запросы</a>
-</nav>
-<a href="#top" style="flex: 0 0 auto; padding: 12px 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none">
-<span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; letter-spacing: 0.04em; color: #2B2D1C">Арина Шустовская</span>
-<span style="font-size: 10px; letter-spacing: 0.42em; text-transform: uppercase; color: #5F5A49">психолог</span>
+<header class="site-header">
+<div class="hdr-in">
+<a href="#top" class="hdr-logo" aria-label="Арина Шустовская, психолог — наверх">
+<span class="hdr-name">Арина Шустовская</span>
+<span class="hdr-sub">психолог · СПб и онлайн</span>
 </a>
-<nav aria-label="Разделы справа" style="display: flex; flex-wrap: wrap; justify-content: flex-end; flex: 1 1 300px">
-<a class="nav-cell" href="#format" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-left: 1px solid rgba(43,45,28,0.12)">Стоимость</a>
-<a class="nav-cell" href="#contacts" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-left: 1px solid rgba(43,45,28,0.12)">Контакты</a>
-<a href="http://t.me/ar1shust" style="padding: 22px 28px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; background: #DCE3CC; color: #2B2D1C">Записаться</a>
+<nav class="hdr-nav" aria-label="Разделы сайта">
+<a href="#approach">Подход</a>
+<a href="#about">Обо мне</a>
+<a href="#requests">Запросы</a>
+<a href="#format">Стоимость</a>
+<a href="#faq">Вопросы</a>
+<a href="#contacts">Контакты</a>
 </nav>
+<div class="hdr-actions">
+<a href="http://t.me/ar1shust" class="hdr-tg" aria-label="Написать в Telegram"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4 3 11l6 2.5L11.5 20l3-4.5L19 19z"></path><path d="m9 13.5 7-5"></path></svg></a>
+<a href="http://t.me/ar1shust" class="hdr-cta">Записаться <span aria-hidden="true">→</span></a>
+</div>
 </div>
 </header>
 
@@ -264,7 +301,7 @@ details summary::-webkit-details-marker{display:none}
 </section>
 
 <!-- ВОПРОСЫ -->
-<section aria-label="Частые вопросы" style="background: #FFFFFF; border-top: 1px solid rgba(43,45,28,0.12)">
+<section id="faq" aria-label="Частые вопросы" style="background: #FFFFFF; border-top: 1px solid rgba(43,45,28,0.12)">
 <div style="max-width: 1360px; margin: 0 auto; padding: 104px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px 80px">
 <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5C5F38">[ вопросы ]</p>
@@ -294,7 +331,7 @@ details summary::-webkit-details-marker{display:none}
 <img src="assets/contacts-top.webp" alt="" style="position: absolute; top: 0; left: 0; width: 100%; display: block">
 </div>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: clamp(56px, 11vw, 170px); background: linear-gradient(#FFFFFF, rgba(255,255,255,0)); pointer-events: none; z-index: 0"></div>
-<div class="pad-ct" style="max-width: 1360px; margin: 0 auto; padding: 300px 32px 40px; box-sizing: border-box; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 72px">
+<div class="pad-ct" style="max-width: 1360px; margin: 0 auto; padding: 300px 32px 120px; box-sizing: border-box; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 72px">
 <div style="display: flex; flex-wrap: wrap; gap: 48px 80px; align-items: flex-end">
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4C38">[ контакты ]</p>
@@ -307,13 +344,46 @@ details summary::-webkit-details-marker{display:none}
 <a href="https://www.b17.ru/shustovskaya_arina/" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 28px; background: #FFFFFF; color: #2B2D1C; border-radius: 999px; text-decoration: none; font-size: 16px"><span>Анкета на b17</span><span aria-hidden="true">→</span></a>
 </div>
 </div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-top: 28px; border-top: 1px solid rgba(43,45,28,0.2); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #3F4130">
-<span>Арина Шустовская / психолог</span>
-<span>Санкт-Петербург · онлайн</span>
-<a href="#top" style="color: #3F4130">[Политика конфиденциальности]</a>
-</div>
 </div>
 </section>
+
+<!-- ПОДВАЛ -->
+<footer class="site-footer">
+<div class="ftr-in">
+<div class="ftr-grid">
+<div class="ftr-col ftr-about">
+<p class="ftr-lead">Индивидуальные консультации для взрослых. Схема-терапия и КПТ — бережно, без оценок и честно.</p>
+<a href="http://t.me/ar1shust" class="ftr-cta">Записаться на консультацию <span aria-hidden="true">→</span></a>
+</div>
+<nav class="ftr-col" aria-label="Разделы сайта в подвале">
+<p class="ftr-h">Разделы</p>
+<a href="#approach">Подход</a>
+<a href="#about">Обо мне</a>
+<a href="#requests">Запросы</a>
+<a href="#format">Стоимость</a>
+<a href="#faq">Вопросы</a>
+</nav>
+<div class="ftr-col">
+<p class="ftr-h">Связь</p>
+<a href="http://t.me/ar1shust">Telegram · @ar1shust</a>
+<a href="mailto:arina.schustovskaya@yandex.ru">arina.schustovskaya@yandex.ru</a>
+<a href="https://www.b17.ru/shustovskaya_arina/">Анкета на b17</a>
+</div>
+<div class="ftr-col">
+<p class="ftr-h">Где принимаю</p>
+<p>Кабинет в центре Санкт-Петербурга: м. Маяковская, Сенная / Спасская / Садовая, Невский проспект</p>
+<p>Онлайн — Яндекс Телемост, Контур Толк</p>
+</div>
+</div>
+<p class="ftr-word" aria-hidden="true">Арина <em>Шустовская</em></p>
+<div class="ftr-bottom">
+<span>© 2026 Арина Шустовская, психолог</span>
+<a href="https://drive.google.com/file/d/1RHoPeYV1MsGsc4jJUyTknxTIUj4RAplH/view?usp=sharing">Правила работы</a>
+<a href="#top">[Политика конфиденциальности]</a>
+<a href="#top">Наверх ↑</a>
+</div>
+</div>
+</footer>
 
 </div>
 

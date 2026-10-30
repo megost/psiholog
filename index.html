@@ -56,6 +56,23 @@ section[id]{scroll-margin-top:88px}
 .ftr-bottom a:hover{color:#FFFFFF}
 @media (max-width:1000px){.ftr-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.ftr-in{padding:44px 16px 22px;gap:28px}.ftr-grid{grid-template-columns:1fr;gap:22px}.ftr-grid>nav{display:none}.ftr-col{gap:6px;font-size:14px;line-height:1.5}.ftr-h{margin-bottom:0 !important;font-size:11px !important}.ftr-lead{font-size:20px !important}.ftr-cta{margin-top:6px;min-height:44px;padding:0 20px;font-size:13px}.ftr-word{font-size:10.2vw;white-space:nowrap}.ftr-bottom{gap:6px 16px;padding-top:16px;font-size:10px;letter-spacing:.08em;justify-content:flex-start}}
+.docs{background:#FFFFFF}
+.docs-in{max-width:1360px;margin:0 auto;padding:24px 32px 112px;box-sizing:border-box;display:flex;flex-direction:column;gap:40px}
+.docs-head{display:flex;flex-direction:column;gap:16px}
+.docs-kicker{margin:0;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#5C5F38}
+.docs-title{margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,4.4vw,64px);line-height:1.02;color:#2B2D1C}
+.docs-note{margin:0;font-size:14px;color:#5F5A49}
+.docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.doc-card{display:flex;flex-direction:column;gap:16px;text-decoration:none;color:#2B2D1C}
+.doc-frame{display:block;background:#EEF2E6;border-radius:24px;padding:clamp(14px,2vw,28px);transition:background .2s}
+.doc-frame img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 10px 30px rgba(43,45,28,.14);transition:transform .25s}
+.doc-card:hover .doc-frame{background:#DCE3CC}
+.doc-card:hover img{transform:translateY(-4px)}
+.doc-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.doc-year{font-family:'Cormorant Garamond',serif;font-size:22px;color:#5C5F38}
+.doc-name{font-size:15px;font-weight:500}
+.doc-org{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5F5A49;margin-left:auto}
+@media (max-width:600px){.docs-in{padding:8px 16px 72px;gap:28px}.doc-org{margin-left:0}}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 .hero-word{white-space:nowrap}.m-only{display:none}.tg{display:block}
@@ -224,6 +241,27 @@ details summary::-webkit-details-marker{display:none}
 </div>
 </section>
 
+<!-- ДОКУМЕНТЫ -->
+<section id="docs" aria-label="Документы об образовании" class="docs">
+<div class="docs-in">
+<div class="docs-head">
+<p class="docs-kicker">[ документы ]</p>
+<h2 class="docs-title">Образование и <em>квалификация</em></h2>
+<p class="docs-note">Нажмите на документ, чтобы открыть его целиком.</p>
+</div>
+<div class="docs-grid">
+<a class="doc-card" href="assets/diploma.webp" target="_blank" rel="noopener">
+<span class="doc-frame"><img src="assets/diploma-thumb.webp" alt="Диплом бакалавра РАНХиГС по направлению «Психология», Шустовская Арина Алексеевна" loading="lazy" width="900" height="637"></span>
+<span class="doc-meta"><span class="doc-year">2026</span><span class="doc-name">Диплом бакалавра · Психология</span><span class="doc-org">РАНХиГС</span></span>
+</a>
+<a class="doc-card" href="assets/cert-schema.webp" target="_blank" rel="noopener">
+<span class="doc-frame"><img src="assets/cert-schema-thumb.webp" alt="Сертификат о прохождении курса «Схема-терапия», 32 академических часа, школа «Чистые когниции»" loading="lazy" width="900" height="634"></span>
+<span class="doc-meta"><span class="doc-year">2025</span><span class="doc-name">Курс «Схема-терапия» · 32 ак. часа</span><span class="doc-org">Чистые Когниции</span></span>
+</a>
+</div>
+</div>
+</section>
+
 <!-- ПРЕИМУЩЕСТВА -->
 <section aria-label="Принципы работы" style="position: relative; overflow: hidden; background: #D8DFCD">
 <div aria-hidden="true" class="deco-pr" style="position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: max(100%, 1000px); pointer-events: none; z-index: 0">
@@ -360,6 +398,7 @@ details summary::-webkit-details-marker{display:none}
 <a href="#approach">Подход</a>
 <a href="#about">Обо мне</a>
 <a href="#requests">Запросы</a>
+<a href="#docs">Документы</a>
 <a href="#format">Стоимость</a>
 <a href="#faq">Вопросы</a>
 </nav>

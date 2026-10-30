@@ -3,428 +3,479 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Арина Шустовская — вариант 2</title>
 <meta name="description" content="Психолог Арина Шустовская — индивидуальные консультации для взрослых очно в Санкт-Петербурге и онлайн. Схема-терапия и КПТ.">
-<title>Арина Шустовская — психолог</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap">
+<style>
+:root{
+  --bg:#94AEDF; --cream:#F6F0E6; --tile:#EDE5D8; --blue:#1D66A6; --blue-d:#174F82;
+  --ink:#1F3F63; --muted:#4A6584; --lb:#A9BCEB; --lb2:#8EA6DD;
+  --lav:#C3B5E3; --sage:#A9C49B; --terra:#E2B79C; --slate:#AFC3CF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Golos Text",Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.01em;line-height:1.08}
+p{margin:0}
+section[id]{scroll-margin-top:100px}
+.svg-defs{position:absolute;width:0;height:0;overflow:hidden}
 
+/* шапка */
+.hdr{position:sticky;top:12px;z-index:50;max-width:1200px;margin:12px auto 0;padding:0 24px}
+.hdr-in{background:rgba(246,240,230,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:18px;height:72px;padding:0 12px 0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 6px 24px rgba(29,102,166,.12)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--blue)}
+.logo-mark{width:40px;height:40px;flex:0 0 auto}
+.logo-t{display:flex;flex-direction:column;line-height:1.1}
+.logo-n{font-weight:600;font-size:19px}
+.logo-s{font-size:12px;color:var(--muted)}
+.nav{display:flex;gap:2px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);padding:10px 14px;border-radius:12px}
+.nav a:hover{background:var(--tile)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:14px;background:var(--blue);color:var(--cream);font-weight:600;font-size:15px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.btn.ghost:hover{background:var(--tile)}
+.btn.light{background:var(--cream);color:var(--blue)}
+.btn.light:hover{background:#fff}
+
+/* сетка карточек */
+.page{max-width:1200px;margin:0 auto;padding:24px 24px 0;display:flex;flex-direction:column;gap:24px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.row.r-wide{grid-template-columns:1.25fr 1fr}
+.card{background:var(--cream);border-radius:22px;padding:clamp(24px,4vw,48px);position:relative;overflow:hidden}
+.card.blue{background:var(--blue);color:var(--cream)}
+.kick{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.card.blue .kick{color:#C9D8F2}
+.h2{font-size:clamp(30px,3.4vw,44px);color:var(--blue)}
+.card.blue .h2{color:var(--cream)}
+.rule{width:72px;height:2px;background:var(--blue);opacity:.5;border-radius:2px;margin:22px 0}
+.lead{font-size:17px;color:var(--ink);max-width:560px}
+.card.blue .lead{color:#E6EDF8}
+
+/* герой */
+.hero{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:24px;min-height:520px}
+.hero h1{font-size:clamp(46px,6.2vw,84px);color:var(--blue);font-weight:600}
+.hero-sub{font-size:clamp(20px,2vw,26px);color:var(--blue);font-weight:500;margin-top:6px}
+.hero-meta{margin-top:28px;display:flex;flex-direction:column;gap:4px;font-size:15px;color:var(--muted)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-art{width:100%;height:auto;display:block}
+
+/* подход */
+.approach{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.path-art{width:170px;height:auto}
+.quote{display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:300px}
+.quote-t{font-size:clamp(26px,2.6vw,34px);font-weight:500;line-height:1.2}
+.quote-art{position:absolute;right:-10px;bottom:-12px;width:min(46%,230px);opacity:.95}
+
+/* запросы */
+.req-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.tile{background:var(--tile);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:12px}
+.tile-ic{width:64px;height:64px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.tile-ic svg{width:44px;height:44px}
+.tile h3{font-size:18px;color:var(--blue)}
+.tile ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.req-note{margin-top:20px;font-size:15px;color:var(--muted)}
+
+/* обо мне */
+.about{display:grid;grid-template-columns:190px 1fr;gap:26px;align-items:start}
+.about-ph{position:relative;aspect-ratio:3/4}
+.about-ph svg{position:absolute;inset:6% -4% 0 -4%;width:108%;height:94%}
+.about-ph img{position:absolute;left:0;right:0;bottom:0;margin:auto;width:92%;height:auto;display:block}
+.about-txt{display:flex;flex-direction:column;gap:12px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{background:var(--tile);border-radius:10px;padding:7px 12px;font-size:13.5px;font-weight:500}
+.edu{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.edu li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:14px 0;border-bottom:1.5px solid rgba(29,102,166,.15)}
+.edu li:first-child{border-top:1.5px solid rgba(29,102,166,.15)}
+.edu b{color:var(--blue);font-weight:600}
+.edu small{display:block;color:var(--muted);font-size:13.5px}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.doc{display:block;background:var(--tile);border-radius:14px;padding:10px;text-decoration:none;transition:transform .2s}
+.doc:hover{transform:translateY(-3px)}
+.doc img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 6px 16px rgba(31,63,99,.15)}
+.doc span{display:block;font-size:13px;font-weight:500;margin-top:8px;color:var(--ink)}
+
+/* принципы */
+.princ{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:center}
+.bubbles{position:relative;height:400px}
+.bubbles svg.lines{position:absolute;inset:0;width:100%;height:100%}
+.bub{position:absolute;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;color:#1C3A5C;font-size:14px;font-weight:600;line-height:1.25;width:150px;height:150px;transform:translate(-50%,-50%)}
+.bub small{font-weight:400;font-size:12.5px;margin-top:4px;line-height:1.3}
+.bub.c{width:190px;height:190px;background:var(--blue);color:var(--cream);font-size:20px;font-weight:600;left:50%;top:50%}
+.b1{background:var(--sage);left:16%;top:22%}
+.b2{background:var(--slate);left:84%;top:22%}
+.b3{background:var(--terra);left:16%;top:78%}
+.b4{background:var(--lav);left:84%;top:78%}
+
+/* как проходит */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:28px}
+.step-h{height:64px;display:flex;align-items:center;justify-content:center;font-weight:600;color:#1C3A5C;font-size:15px;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%,12% 50%);padding:0 10%}
+.step:first-child .step-h{clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}
+.step:nth-child(1) .step-h{background:var(--lav)}
+.step:nth-child(2) .step-h{background:var(--sage)}
+.step:nth-child(3) .step-h{background:var(--slate)}
+.step ul{margin:14px 0 0;padding-left:18px;font-size:14.5px;display:flex;flex-direction:column;gap:6px}
+
+/* формат */
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.price{background:var(--tile);border-radius:18px;padding:26px;display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:start}
+.price svg{width:84px;height:84px;grid-row:span 3}
+.price h3{font-size:20px;color:var(--blue)}
+.price .sum{font-size:40px;font-weight:600;color:var(--blue);line-height:1}
+.price .sum small{font-size:15px;font-weight:500;color:var(--muted)}
+.price p{font-size:14.5px;color:var(--ink);grid-column:1/-1}
+.limits{margin-top:16px;font-size:14.5px;color:var(--muted)}
+.limits b{color:var(--ink)}
+
+/* вопросы */
+.faq details{border-bottom:1.5px solid rgba(29,102,166,.15)}
+.faq details:first-of-type{border-top:1.5px solid rgba(29,102,166,.15)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:18px;font-weight:600;color:var(--blue);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{font-style:normal;width:32px;height:32px;border-radius:10px;background:var(--tile);display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:transform .2s}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;max-width:640px;font-size:15.5px}
+
+/* финал */
+.final{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center}
+.final h2{font-size:clamp(34px,4vw,54px);color:var(--cream);font-weight:500;line-height:1.1}
+.links{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:0 22px;border-radius:14px;background:rgba(246,240,230,.1);color:var(--cream);text-decoration:none;font-weight:500;box-shadow:inset 0 0 0 1.5px rgba(246,240,230,.35)}
+.links a:hover{background:rgba(246,240,230,.2)}
+.links a.main{background:var(--cream);color:var(--blue);box-shadow:none}
+.plane{width:100%;max-width:420px;height:auto;justify-self:center}
+
+/* подвал */
+.ftr{max-width:1200px;margin:0 auto;padding:28px 24px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:14px;color:#14365C}
+.ftr a{color:#14365C}
+
+/* карандашная текстура */
+.cr{filter:url(#crayon)}
+
+@media (max-width:1060px){.nav{display:none}}
+@media (max-width:900px){
+  .row,.row.r-wide,.hero,.princ,.final{grid-template-columns:1fr}
+  .hero{min-height:0}
+  .req-grid{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+  .about-ph{max-width:260px}
+}
+@media (max-width:600px){
+  .hdr{padding:0 12px;top:8px;margin-top:8px}
+  .hdr-in{height:64px;padding:0 8px 0 14px}
+  .logo-mark{width:34px;height:34px}.logo-n{font-size:16px}.logo-s{font-size:11px}
+  .hdr .btn{min-height:44px;padding:0 16px;font-size:14px}
+  .page{padding:16px 12px 0;gap:14px}
+  .row{gap:14px}
+  .card{border-radius:18px;padding:24px 20px}
+  .req-grid{grid-template-columns:1fr}
+  .approach{grid-template-columns:1fr}
+  .path-art{width:120px}
+  .quote{min-height:300px;padding-bottom:110px !important}
+  .quote-art{width:150px !important;right:-6px;bottom:-8px}
+  .bubbles{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .bubbles svg.lines{display:none}
+  .bub{position:static;transform:none;width:auto;height:auto;min-width:0;min-height:128px;border-radius:20px;font-size:13.5px;hyphens:auto;overflow-wrap:anywhere}
+  .bub.c{grid-column:1/-1;width:auto;height:auto;min-height:0;padding:22px;border-radius:18px}
+  .steps{grid-template-columns:1fr;gap:16px}
+  .step-h,.step:first-child .step-h{clip-path:none;border-radius:12px;justify-content:flex-start;padding:0 18px}
+  .prices{grid-template-columns:1fr}
+  .price .sum{font-size:34px}
+  .ftr{padding:22px 16px 32px;flex-direction:column}
+}
+</style>
 </head>
 <body>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap">
-<style>
-body{margin:0;background:#FFFFFF}
-a{color:#3D4027}a:hover{color:#5C5F38}
-.deco-podhod{background:linear-gradient(90deg,#E2E4D7 0%,#DDDFD2 15%,#D8DACC 30%,#D0D2C2 50%,#C6C9B6 70%,#C0C2AE 85%,#BABDAA 100%)}
-.deco-pr{background:#D8DFCD}
-.deco-ct{background:linear-gradient(90deg,#DADCCB 0%,#DCDFCE 15%,#D9DCCB 30%,#D5D7C5 50%,#CFD1BC 70%,#C9CBB6 85%,#C2C4AF 100%)}
-.pad-pr{padding-top:clamp(220px,19vw,280px) !important;padding-bottom:clamp(300px,30vw,440px) !important}
-@media (max-width:760px){.deco-pr{width:100% !important}.pr-branch{width:100% !important}.pr-vase{width:72% !important}.pad-pr{padding-bottom:330px !important}}
-.pad-ct{padding-top:clamp(240px,21vw,320px) !important}
-.pad-podhod{padding-top:clamp(250px,21vw,320px) !important;padding-bottom:clamp(270px,26vw,400px) !important}
-html{scroll-behavior:smooth}
-section[id]{scroll-margin-top:88px}
-.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(43,45,28,.1)}
-.hdr-in{max-width:1360px;margin:0 auto;padding:0 32px;height:84px;display:flex;align-items:center;justify-content:space-between;gap:32px;box-sizing:border-box}
-.hdr-logo{display:flex;flex-direction:column;gap:2px;text-decoration:none;flex:0 0 auto}
-.hdr-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;line-height:1;color:#2B2D1C;letter-spacing:.01em}
-.hdr-sub{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#5F5A49}
-.hdr-nav{display:flex;gap:4px;align-items:center}
-.hdr-nav a{padding:10px 14px;border-radius:999px;font-size:14px;font-weight:500;color:#2B2D1C;text-decoration:none;transition:background .2s}
-.hdr-nav a:hover{background:#EEF2E6;color:#2B2D1C}
-.hdr-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
-.hdr-tg{width:48px;height:48px;border-radius:50%;border:1px solid rgba(43,45,28,.22);display:flex;align-items:center;justify-content:center;color:#2B2D1C}
-.hdr-tg:hover{background:#EEF2E6;color:#2B2D1C}
-.hdr-cta{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;background:#3D4027;color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none}
-.hdr-cta:hover{background:#2B2D1C;color:#FFFFFF}
-@media (max-width:1100px){.hdr-nav{display:none}}
-@media (max-width:760px){.hdr-in{height:68px;padding:0 16px;gap:12px}.hdr-name{font-size:22px}.hdr-sub{font-size:9px;letter-spacing:.18em}.hdr-tg{display:none}.hdr-cta{height:44px;padding:0 18px;font-size:13px}}
-.site-footer{background:#2B2D1C;color:#E9E6DC}
-.ftr-in{max-width:1360px;margin:0 auto;padding:88px 32px 32px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px}
-.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.3fr;gap:40px}
-.ftr-col{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.6}
-.ftr-col p{margin:0;color:#BFC0AE}
-.ftr-col a{color:#E9E6DC;text-decoration:none;overflow-wrap:anywhere}
-.ftr-col a:hover{color:#DCE3CC;text-decoration:underline}
-.ftr-h{font-size:12px !important;letter-spacing:.22em;text-transform:uppercase;color:#9EA08A !important;margin-bottom:4px !important}
-.ftr-lead{font-family:'Cormorant Garamond',serif;font-size:26px !important;line-height:1.25 !important;color:#E9E6DC !important;max-width:380px}
-.ftr-cta{align-self:flex-start;margin-top:12px;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#DCE3CC;color:#2B2D1C !important;font-weight:600;font-size:14px}
-.ftr-cta:hover{background:#FFFFFF;text-decoration:none !important}
-.ftr-word{margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,9.6vw,150px);line-height:.9;letter-spacing:-.01em;color:#DCE3CC;white-space:nowrap}
-.ftr-word em{font-style:italic;color:#9EA08A}
-.ftr-bottom{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(233,230,220,.18);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9EA08A}
-.ftr-bottom a{color:#BFC0AE}
-.ftr-bottom a:hover{color:#FFFFFF}
-@media (max-width:1000px){.ftr-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.ftr-in{padding:44px 16px 22px;gap:28px}.ftr-grid{grid-template-columns:1fr;gap:22px}.ftr-grid>nav{display:none}.ftr-col{gap:6px;font-size:14px;line-height:1.5}.ftr-h{margin-bottom:0 !important;font-size:11px !important}.ftr-lead{font-size:20px !important}.ftr-cta{margin-top:6px;min-height:44px;padding:0 20px;font-size:13px}.ftr-word{font-size:10.2vw;white-space:nowrap}.ftr-bottom{gap:6px 16px;padding-top:16px;font-size:10px;letter-spacing:.08em;justify-content:flex-start}}
-.docs{background:#FFFFFF}
-.docs-in{max-width:1360px;margin:0 auto;padding:24px 32px 112px;box-sizing:border-box;display:flex;flex-direction:column;gap:40px}
-.docs-head{display:flex;flex-direction:column;gap:16px}
-.docs-kicker{margin:0;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#5C5F38}
-.docs-title{margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,4.4vw,64px);line-height:1.02;color:#2B2D1C}
-.docs-note{margin:0;font-size:14px;color:#5F5A49}
-.docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.doc-card{display:flex;flex-direction:column;gap:16px;text-decoration:none;color:#2B2D1C}
-.doc-frame{display:block;background:#EEF2E6;border-radius:24px;padding:clamp(14px,2vw,28px);transition:background .2s}
-.doc-frame img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 10px 30px rgba(43,45,28,.14);transition:transform .25s}
-.doc-card:hover .doc-frame{background:#DCE3CC}
-.doc-card:hover img{transform:translateY(-4px)}
-.doc-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
-.doc-year{font-family:'Cormorant Garamond',serif;font-size:22px;color:#5C5F38}
-.doc-name{font-size:15px;font-weight:500}
-.doc-org{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5F5A49;margin-left:auto}
-@media (max-width:600px){.docs-in{padding:8px 16px 72px;gap:28px}.doc-org{margin-left:0}}
-details summary{cursor:pointer;list-style:none}
-details summary::-webkit-details-marker{display:none}
-.hero-word{white-space:nowrap}.m-only{display:none}.tg{display:block}
-@media (max-width:760px){.hero-word{margin:0 !important;text-align:left !important;white-space:normal !important;transform:none !important}.m-only{display:inline}.hero-right-word,.hero-right>div{display:none !important}.hero-right{align-items:flex-start !important;text-align:left !important;gap:14px !important;padding-bottom:48px !important}.hero-right>p{max-width:none !important}.tg{display:inline}.tg+.tg::before{content:" · "}.hero-photo{order:-1;width:50vw !important;margin:0 0 0 8vw !important}.hero-shadow{left:90% !important;height:76% !important}.hero-photo::after{content:"";position:absolute;left:-8vw;width:100vw;bottom:0;height:90px;z-index:2;background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}}
-</style>
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+<defs>
+<filter id="crayon" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="4" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="11" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -7 0 0 0 4.6" result="ga"/>
+<feComposite in="d" in2="ga" operator="in"/>
+</filter>
+</defs>
+</svg>
 
-<div id="top" style="font-family: Manrope, system-ui, sans-serif; color: #2B2D1C; background: #FFFFFF; width: 100%; overflow-x: hidden">
-
-<!-- ШАПКА -->
-<header class="site-header">
+<header class="hdr">
 <div class="hdr-in">
-<a href="#top" class="hdr-logo" aria-label="Арина Шустовская, психолог — наверх">
-<span class="hdr-name">Арина Шустовская</span>
-<span class="hdr-sub">психолог · СПб и онлайн</span>
+<a href="#top" class="logo" aria-label="Арина Шустовская, психолог — наверх">
+<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><g class="cr"><circle cx="20" cy="20" r="19" fill="#1D66A6"/><path d="M20 30c-7-4.5-10-8.2-10-12a5 5 0 0 1 10-1.8A5 5 0 0 1 30 18c0 3.8-3 7.5-10 12z" fill="#F6F0E6"/></g></svg>
+<span class="logo-t"><span class="logo-n">Арина Шустовская</span><span class="logo-s">психолог · СПб и онлайн</span></span>
 </a>
-<nav class="hdr-nav" aria-label="Разделы сайта">
+<nav class="nav" aria-label="Разделы сайта">
 <a href="#approach">Подход</a>
-<a href="#about">Обо мне</a>
 <a href="#requests">Запросы</a>
+<a href="#about">Обо мне</a>
 <a href="#format">Стоимость</a>
 <a href="#faq">Вопросы</a>
-<a href="#contacts">Контакты</a>
 </nav>
-<div class="hdr-actions">
-<a href="http://t.me/ar1shust" class="hdr-tg" aria-label="Написать в Telegram"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4 3 11l6 2.5L11.5 20l3-4.5L19 19z"></path><path d="m9 13.5 7-5"></path></svg></a>
-<a href="http://t.me/ar1shust" class="hdr-cta">Записаться <span aria-hidden="true">→</span></a>
-</div>
+<a href="http://t.me/ar1shust" class="btn">Записаться</a>
 </div>
 </header>
 
+<main class="page" id="top">
+
 <!-- ГЕРОЙ -->
-<section aria-label="Главный экран" style="max-width: 1360px; margin: 0 auto; padding: 56px 32px 0; box-sizing: border-box">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px">
-
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 28px; padding-bottom: 72px; min-width: 0">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; line-height: 1.9; color: #5C5F38; max-width: 220px">Пространство, где безопасно быть собой</p>
-<div style="width: 40px; height: 1px; background: #5C5F38"></div>
-<h1 class="hero-word" style="margin: 72px 0 0 0; position: relative; z-index: 2; text-align: left; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: clamp(60px, 7.4vw, 112px); line-height: 0.9; color: #2B2D1C">Встреча<span class="m-only"> с собой</span></h1>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2B2D1C; max-width: 300px">Индивидуальные консультации для взрослых — очно в Санкт-Петербурге и онлайн.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="http://t.me/ar1shust" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; background: #3D4027; color: #FFFFFF; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Записаться <span aria-hidden="true">→</span></a>
-<a href="#approach" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #3D4027; color: #3D4027; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px">О подходе</a>
+<section class="card hero" aria-label="Главный экран">
+<div>
+<h1>Встреча<br>с собой</h1>
+<div class="rule"></div>
+<p class="hero-sub">Пространство, где безопасно быть собой</p>
+<div class="hero-meta">
+<span>Индивидуальные консультации для взрослых</span>
+<span>Схема-терапия и КПТ · очно в Санкт-Петербурге и онлайн</span>
+</div>
+<div class="hero-btns">
+<a href="http://t.me/ar1shust" class="btn">Записаться →</a>
+<a href="#approach" class="btn ghost">О подходе</a>
 </div>
 </div>
-
-<div class="hero-photo" style="flex: 0 0 auto; width: clamp(240px, 21vw, 300px); margin: 0 auto; position: relative; z-index: 1; align-self: flex-end">
-<img class="hero-shadow" src="assets/arina-shadow.webp" alt="" aria-hidden="true" style="position: absolute; left: 96%; bottom: 0; height: 88%; width: auto; opacity: 0.22; z-index: 0; pointer-events: none">
-<img src="assets/arina-hero.webp" alt="Арина Шустовская, психолог" style="position: relative; z-index: 1; display: block; width: 100%; height: auto">
-</div>
-
-<div class="hero-right" style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: flex-end; gap: 28px; padding-bottom: 72px; min-width: 0; text-align: right">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; line-height: 1.9; color: #5C5F38"><span class="tg">Схема-терапия</span><span class="tg">КПТ</span><span class="tg">очно · онлайн</span></p>
-<div style="width: 40px; height: 1px; background: #5C5F38"></div>
-<p class="hero-word hero-right-word" style="margin: 72px 0 0 0; transform: translateX(-110px); position: relative; z-index: 2; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(60px, 7.4vw, 112px); line-height: 0.9; color: #2B2D1C">с собой</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49; max-width: 260px">— Без оценок, без спешки и без давления. Можно говорить о стыде, вине и тревоге.</p>
-</div>
-
-</div>
+<svg class="hero-art" viewBox="0 0 520 480" role="img" aria-label="Иллюстрация: девушка сидит, держа в руках сердце, а её большая мягкая тень бережно обнимает её за плечо">
+<g class="cr">
+<ellipse cx="230" cy="462" rx="200" ry="14" fill="#8EA6DD" opacity=".35"/>
+<!-- тень-двойник -->
+<path d="M196 470 C188 372 214 300 262 268 C238 236 244 168 290 140 C336 112 396 130 410 180 C422 224 404 256 384 272 C428 306 446 384 440 470 Z" fill="#A9BCEB"/>
+<path d="M300 196 q8 7 16 0 M340 196 q8 7 16 0" fill="none" stroke="#6F8BCB" stroke-width="4" stroke-linecap="round"/>
+<circle cx="296" cy="214" r="9" fill="#C3B5E3"/><circle cx="360" cy="214" r="9" fill="#C3B5E3"/>
+<!-- девушка -->
+<path d="M70 452 C70 410 300 410 300 452 C300 478 70 478 70 452 Z" fill="#2F5FA8"/>
+<ellipse cx="86" cy="462" rx="18" ry="10" fill="#F0CDB8"/>
+<ellipse cx="284" cy="462" rx="18" ry="10" fill="#F0CDB8"/>
+<path d="M118 440 C112 380 124 322 150 302 C166 292 204 292 220 302 C246 322 258 380 252 440 Z" fill="#C3B5E3"/>
+<path d="M140 238 C134 192 236 192 230 238 C236 276 242 302 238 322 L132 322 C128 302 134 276 140 238 Z" fill="#4A332B"/>
+<rect x="173" y="266" width="24" height="34" rx="8" fill="#EDC3AA"/>
+<circle cx="185" cy="240" r="42" fill="#F1CDB6"/>
+<path d="M142 238 C142 196 228 196 228 238 C216 220 200 216 186 226 C172 216 154 220 142 238 Z" fill="#4A332B"/>
+<path d="M164 246 q7 6 14 0 M192 246 q7 6 14 0" fill="none" stroke="#4A332B" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M178 264 q7 5 14 0" fill="none" stroke="#B5645A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="160" cy="258" r="7" fill="#EE9F95" opacity=".55"/><circle cx="210" cy="258" r="7" fill="#EE9F95" opacity=".55"/>
+<path d="M150 312 C130 352 150 380 176 376" fill="none" stroke="#AE9DDA" stroke-width="24" stroke-linecap="round"/>
+<path d="M220 312 C240 352 220 380 194 376" fill="none" stroke="#AE9DDA" stroke-width="24" stroke-linecap="round"/>
+<path d="M185 372 C170 358 158 344 168 334 C176 326 184 332 185 338 C186 332 194 326 202 334 C212 344 200 358 185 372 Z" fill="#E09A7B"/>
+<circle cx="174" cy="374" r="11" fill="#F1CDB6"/><circle cx="196" cy="374" r="11" fill="#F1CDB6"/>
+<!-- рука тени на плече -->
+<path d="M268 318 C240 346 186 352 146 334" fill="none" stroke="#8EA6DD" stroke-width="26" stroke-linecap="round"/>
+<ellipse cx="140" cy="330" rx="19" ry="14" fill="#8EA6DD" transform="rotate(20 140 330)"/>
+<!-- искорки -->
+<path d="M70 120 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6 Z" fill="#C3B5E3"/>
+<path d="M460 90 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z" fill="#A9C49B"/>
+<circle cx="110" cy="60" r="6" fill="#A9BCEB"/><circle cx="470" cy="250" r="7" fill="#E2B79C"/>
+</g>
+</svg>
 </section>
 
-<!-- ПОДХОД + ЗАПРОСЫ -->
-<section id="approach" style="position: relative; overflow: hidden; background: #D0D2C2; color: #2B2D1C">
-<div aria-hidden="true" class="deco-podhod" style="position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: max(100%, 1000px); pointer-events: none; z-index: 0">
-<img src="assets/podhod-top.webp" alt="" style="position: absolute; top: 0; left: 0; width: 100%; display: block">
-<img src="assets/podhod-bottom.webp" alt="" style="position: absolute; bottom: 0; left: 0; width: 100%; display: block">
+<!-- ПОДХОД -->
+<div class="row r-wide" id="approach">
+<section class="card" aria-label="Мой подход">
+<p class="kick">Мой подход</p>
+<div class="approach">
+<svg class="path-art" viewBox="0 0 160 190" aria-hidden="true">
+<g class="cr">
+<path d="M30 170 C10 130 90 130 80 95 C70 60 140 70 120 25" fill="none" stroke="#8EA6DD" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 15"/>
+<circle cx="30" cy="170" r="10" fill="#1D66A6"/>
+<circle cx="80" cy="95" r="10" fill="#C3B5E3"/>
+<circle cx="120" cy="25" r="10" fill="#A9C49B"/>
+<path d="M20 178 c-6-14 2-22 8-24 M26 176 c6-12 16-12 20-10" fill="none" stroke="#8FAE80" stroke-width="5" stroke-linecap="round"/>
+</g>
+</svg>
+<div>
+<h2 class="h2">Мы вместе ищем решения, подходящие именно вам</h2>
+<div class="rule"></div>
+<p class="lead">Я работаю в схема-терапии и КПТ — подходах с подтверждённой эффективностью. Мы исследуем вашу ситуацию и ищем то, что подходит вам, а не советы «сверху».</p>
 </div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: clamp(56px, 11vw, 170px); background: linear-gradient(#FFFFFF, rgba(255,255,255,0)); pointer-events: none; z-index: 0"></div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: clamp(36px, 6vw, 90px); background: linear-gradient(rgba(255,255,255,0), #FFFFFF); pointer-events: none; z-index: 0"></div>
-<div class="pad-podhod" style="max-width: 1360px; margin: 0 auto; padding: 300px 32px 380px; box-sizing: border-box; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 72px">
+</div>
+</section>
+<section class="card blue quote" aria-label="Главная мысль">
+<p class="kick">Важно</p>
+<p class="quote-t">Можно говорить о сложном — без страха быть непонятым.</p>
+<a href="#steps" class="btn light" style="align-self:flex-start;position:relative;z-index:2">Как устроена работа →</a>
+<svg class="quote-art" viewBox="0 0 240 220" aria-hidden="true">
+<g class="cr">
+<path d="M20 60a26 26 0 0 1 26-26h100a26 26 0 0 1 26 26v40a26 26 0 0 1-26 26H84l-34 28v-28h-4a26 26 0 0 1-26-26z" fill="#A9BCEB"/>
+<circle cx="66" cy="80" r="8" fill="#F6F0E6"/><circle cx="96" cy="80" r="8" fill="#F6F0E6"/><circle cx="126" cy="80" r="8" fill="#F6F0E6"/>
+<path d="M226 136a22 22 0 0 0-22-22h-70a22 22 0 0 0-22 22v30a22 22 0 0 0 22 22h44l28 24v-24h-2a22 22 0 0 0 22-22z" fill="#C3B5E3"/>
+<path d="M169 166c-9-6-13-11-13-15a6 6 0 0 1 13-2 6 6 0 0 1 13 2c0 4-4 9-13 15z" fill="#E09A7B"/>
+</g>
+</svg>
+</section>
+</div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 48px 80px; align-items: flex-end">
-<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4C38">[ мой подход ]</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.05">Можно говорить о сложном —<br><em>без страха быть непонятым.</em></h2>
+<!-- ЗАПРОСЫ -->
+<section class="card" id="requests" aria-label="С чем я работаю">
+<p class="kick">Запросы</p>
+<h2 class="h2">С чем я работаю</h2>
+<div class="req-grid">
+<div class="tile">
+<span class="tile-ic"><svg viewBox="0 0 44 44" aria-hidden="true"><g class="cr"><rect x="19" y="28" width="6" height="14" rx="3" fill="#8EA6DD"/><circle cx="22" cy="18" r="15" fill="#C3B5E3"/><circle cx="22" cy="18" r="10" fill="#E8E2F5"/><path d="M22 23c-4-2.6-5.6-4.6-5.6-6.6a2.8 2.8 0 0 1 5.6-1 2.8 2.8 0 0 1 5.6 1c0 2-1.6 4-5.6 6.6z" fill="#E09A7B"/></g></svg></span>
+<h3>Отношение к себе</h3>
+<ul><li>Нестабильная самооценка, жёсткая самокритика</li><li>Перфекционизм, прокрастинация, страх ошибки</li><li>Непонимание своих желаний и потребностей</li></ul>
 </div>
-<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start">
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3F4130">Я работаю в схема-терапии и КПТ — подходах с подтверждённой эффективностью. Мы вместе исследуем вашу ситуацию и ищем решения, подходящие именно вам, а не советы «сверху».</p>
-<a href="#format" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; background: #FFFFFF; color: #2B2D1C; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Как устроена работа <span aria-hidden="true">→</span></a>
+<div class="tile">
+<span class="tile-ic"><svg viewBox="0 0 44 44" aria-hidden="true"><g class="cr"><circle cx="28" cy="15" r="9" fill="#E2B79C"/><path d="M10 32a7 7 0 0 1 1.5-13.8A9 9 0 0 1 29 20a6 6 0 0 1 2 12z" fill="#A9BCEB"/><path d="M15 36l-1.5 4M22 36l-1.5 4M29 36l-1.5 4" stroke="#8EA6DD" stroke-width="2.5" stroke-linecap="round"/></g></svg></span>
+<h3>Эмоции</h3>
+<ul><li>Тревога, гнев, вина, стыд</li><li>Одиночество и ощущение изоляции</li><li>Постоянное напряжение, трудно расслабиться</li></ul>
+</div>
+<div class="tile">
+<span class="tile-ic"><svg viewBox="0 0 44 44" aria-hidden="true"><g class="cr"><path d="M4 10a6 6 0 0 1 6-6h14a6 6 0 0 1 6 6v7a6 6 0 0 1-6 6h-8l-6 5v-5a6 6 0 0 1-6-6z" fill="#A9BCEB"/><path d="M40 24a6 6 0 0 0-6-6H22a6 6 0 0 0-6 6v6a6 6 0 0 0 6 6h7l6 5v-5a6 6 0 0 0 5-6z" fill="#C3B5E3"/></g></svg></span>
+<h3>Отношения</h3>
+<ul><li>Страх отвержения, сложности с близостью</li><li>Трудно отстаивать границы и говорить «нет»</li><li>Повторяющиеся сценарии и конфликты</li></ul>
+</div>
+<div class="tile">
+<span class="tile-ic"><svg viewBox="0 0 44 44" aria-hidden="true"><g class="cr"><rect x="20" y="10" width="4" height="32" rx="2" fill="#8C6E5C"/><path d="M8 10h22l6 5-6 5H8z" fill="#A9C49B"/><path d="M36 22H14l-6 5 6 5h22z" fill="#E2B79C"/></g></svg></span>
+<h3>Перемены</h3>
+<ul><li>Расставание, завершение отношений</li><li>Переезд, смена работы или учёбы</li><li>Сложные решения и страх будущего</li></ul>
 </div>
 </div>
+<p class="req-note">Не нашли своего запроса? Напишите — обсудим индивидуально, и я честно скажу, смогу ли быть полезна.</p>
+</section>
 
-<div id="requests" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px">
-<article style="background: #FFFFFF; padding: 28px; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1; color: #5C5F38">01</span>
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Отношение к себе</h3>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.55; color: #5F5A49">
-<li>Нестабильная самооценка, жёсткая самокритика</li>
-<li>Перфекционизм, прокрастинация, страх ошибки</li>
-<li>Непонимание своих желаний и потребностей</li>
+<!-- ОБО МНЕ + ОБРАЗОВАНИЕ -->
+<div class="row r-wide" id="about">
+<section class="card" aria-label="Обо мне">
+<p class="kick">Обо мне</p>
+<div class="about">
+<div class="about-ph">
+<svg viewBox="0 0 260 340" aria-hidden="true" preserveAspectRatio="none"><g class="cr"><path d="M30 120 C20 30 150 0 220 50 C270 90 250 200 240 260 C230 330 60 345 30 280 C10 230 36 180 30 120 Z" fill="#A9BCEB"/></g></svg>
+<img src="assets/arina-about.webp" alt="Арина Шустовская" width="676" height="1000">
+</div>
+<div class="about-txt">
+<h2 class="h2">Меня зовут Арина</h2>
+<p>В работе я создаю пространство, где безопасно быть собой. Строю диалог так, чтобы вы могли говорить о сложном без страха быть непонятым.</p>
+<p>Мой главный принцип — полная безоценочность. Я с уважением отношусь к вашему выбору, взглядам и образу жизни.</p>
+<p style="color:var(--muted)">Я продолжаю учиться — поэтому мой профессиональный уровень постоянно растёт.</p>
+<div class="chips"><span class="chip">friendly-психолог</span><span class="chip">практика с мая 2024</span><span class="chip">работаю с 18+</span></div>
+</div>
+</div>
+</section>
+<section class="card" id="docs" aria-label="Образование">
+<p class="kick">Образование</p>
+<h2 class="h2">Чему я училась</h2>
+<ul class="edu" style="margin-top:22px">
+<li><b>2022–2026</b><span>Бакалавриат «Психология»<small>РАНХиГС</small></span></li>
+<li><b>2025</b><span>Курс «Схема-терапия», 32 часа<small>Чистые Когниции</small></span></li>
+<li><b>2026–2028</b><span>Магистратура «Кризисная психология»<small>СПбГИПСР</small></span></li>
 </ul>
-</article>
-<article style="background: #FFFFFF; padding: 28px; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1; color: #5C5F38">02</span>
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Эмоции</h3>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.55; color: #5F5A49">
-<li>Тревога, гнев, вина, стыд</li>
-<li>Одиночество и ощущение изоляции</li>
-<li>Постоянное напряжение, трудно расслабиться</li>
-</ul>
-</article>
-<article style="background: #FFFFFF; padding: 28px; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1; color: #5C5F38">03</span>
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Отношения</h3>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.55; color: #5F5A49">
-<li>Страх отвержения, сложности с близостью</li>
-<li>Трудно отстаивать границы и говорить «нет»</li>
-<li>Повторяющиеся сценарии и конфликты</li>
-</ul>
-</article>
-<article style="background: #FFFFFF; padding: 28px; border-radius: 20px; display: flex; flex-direction: column; gap: 18px">
-<span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; line-height: 1; color: #5C5F38">04</span>
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Перемены</h3>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.55; color: #5F5A49">
-<li>Расставание, завершение отношений</li>
-<li>Переезд, смена работы или учёбы</li>
-<li>Сложные решения и страх будущего</li>
-</ul>
-</article>
+<div class="docs">
+<a class="doc" href="assets/diploma.webp" target="_blank" rel="noopener"><img src="assets/diploma-thumb.webp" alt="Диплом бакалавра РАНХиГС по психологии" loading="lazy" width="900" height="637"><span>Диплом бакалавра →</span></a>
+<a class="doc" href="assets/cert-schema.webp" target="_blank" rel="noopener"><img src="assets/cert-schema-thumb.webp" alt="Сертификат курса «Схема-терапия»" loading="lazy" width="900" height="634"><span>Сертификат «Схема-терапия» →</span></a>
+</div>
+</section>
 </div>
 
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3F4130; max-width: 720px">Не нашли своего запроса? Напишите — обсудим индивидуально, и я честно скажу, смогу ли быть полезна.</p>
+<!-- ПРИНЦИПЫ -->
+<section class="card princ" aria-label="Принципы работы">
+<div>
+<p class="kick">Принципы</p>
+<h2 class="h2">Просить о помощи — нормально</h2>
+<div class="rule"></div>
+<p class="lead">Психологическая помощь — это не слабость, а забота о себе. Вот на чём держится наша работа.</p>
+</div>
+<div class="bubbles">
+<svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M16 22 L50 50 L84 22 M16 78 L50 50 L84 78" stroke="#1D66A6" stroke-width=".5" opacity=".45" fill="none"/></svg>
+<div class="bub c">Безопасное пространство</div>
+<div class="bub b1">Доказательные подходы<small>схема-терапия и КПТ</small></div>
+<div class="bub b2">Конфиденциальность<small>всё остаётся между нами</small></div>
+<div class="bub b3">Прозрачные правила<small>информированное согласие заранее</small></div>
+<div class="bub b4">Официальная оплата<small>чек после каждой сессии</small></div>
 </div>
 </section>
 
-<!-- ОБО МНЕ -->
-<section id="about" style="max-width: 1360px; margin: 0 auto; padding: 112px 32px; box-sizing: border-box">
-<div style="display: flex; flex-wrap: wrap; gap: 56px 80px; align-items: flex-start">
-
-<div style="flex: 1 1 360px; max-width: 480px; display: flex; flex-direction: column; gap: 16px">
-<img src="assets/photo-about.jpg" alt="Арина Шустовская" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px">
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(43,45,28,0.25); font-size: 13px">friendly-психолог</span>
-<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(43,45,28,0.25); font-size: 13px">практика с мая 2024</span>
-<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(43,45,28,0.25); font-size: 13px">работаю с 18+</span>
-</div>
-</div>
-
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5C5F38">[ обо мне ]</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 5vw, 76px); line-height: 1; color: #2B2D1C">Меня зовут <em>Арина</em></h2>
-<div style="display: flex; flex-direction: column; gap: 16px; font-size: 17px; line-height: 1.7; max-width: 640px">
-<p style="margin: 0">В работе я создаю пространство, где безопасно быть собой. Я ценю открытость, поэтому строю диалог так, чтобы вы могли говорить о сложном без страха быть непонятым.</p>
-<p style="margin: 0">Мой главный принцип — полная безоценочность. Я с уважением отношусь к вашему выбору, взглядам и образу жизни.</p>
-<p style="margin: 0; color: #5F5A49">Я продолжаю учиться — поэтому мой профессиональный уровень постоянно растёт.</p>
-</div>
-
-<div style="display: flex; flex-direction: column; margin-top: 12px; border-top: 1px solid rgba(43,45,28,0.15)">
-<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 20px 0; border-bottom: 1px solid rgba(43,45,28,0.15)">
-<span style="flex: 0 0 120px; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5C5F38">2022–2026</span>
-<span style="flex: 1 1 260px; font-size: 15px; line-height: 1.5">Бакалавриат «Психологическое консультирование и коучинг»</span>
-<span style="flex: 0 0 auto; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5A49">РАНХиГС</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 20px 0; border-bottom: 1px solid rgba(43,45,28,0.15)">
-<span style="flex: 0 0 120px; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5C5F38">2025</span>
-<span style="flex: 1 1 260px; font-size: 15px; line-height: 1.5">Курс «Схема-терапия», 32 часа</span>
-<span style="flex: 0 0 auto; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5A49">Чистые Когниции</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 20px 0; border-bottom: 1px solid rgba(43,45,28,0.15)">
-<span style="flex: 0 0 120px; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #5C5F38">2026–2028</span>
-<span style="flex: 1 1 260px; font-size: 15px; line-height: 1.5">Магистратура «Кризисная психология»</span>
-<span style="flex: 0 0 auto; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5A49">СПбГИПСР</span>
-</div>
-</div>
-</div>
-
+<!-- ПОДДЕРЖКА + ЭТАПЫ -->
+<div class="row r-wide">
+<section class="card" id="steps" aria-label="Как проходит работа">
+<p class="kick">Шаг за шагом</p>
+<h2 class="h2">Как проходит работа</h2>
+<div class="steps">
+<div class="step"><div class="step-h">Запись</div><ul><li>Пишете в Telegram или на почту</li><li>Кратко описываете запрос</li><li>Согласуем время</li></ul></div>
+<div class="step"><div class="step-h">Первая встреча</div><ul><li>Знакомимся</li><li>Бережно проясняем запрос</li><li>Вы решаете, комфортно ли вам</li></ul></div>
+<div class="step"><div class="step-h">Работа</div><ul><li>Сессии по 50 минут</li><li>Оплата за 24 часа до встречи</li><li>Чек после сессии</li></ul></div>
 </div>
 </section>
-
-<!-- ДОКУМЕНТЫ -->
-<section id="docs" aria-label="Документы об образовании" class="docs">
-<div class="docs-in">
-<div class="docs-head">
-<p class="docs-kicker">[ документы ]</p>
-<h2 class="docs-title">Образование и <em>квалификация</em></h2>
-<p class="docs-note">Нажмите на документ, чтобы открыть его целиком.</p>
-</div>
-<div class="docs-grid">
-<a class="doc-card" href="assets/diploma.webp" target="_blank" rel="noopener">
-<span class="doc-frame"><img src="assets/diploma-thumb.webp" alt="Диплом бакалавра РАНХиГС по направлению «Психология», Шустовская Арина Алексеевна" loading="lazy" width="900" height="637"></span>
-<span class="doc-meta"><span class="doc-year">2026</span><span class="doc-name">Диплом бакалавра · Психология</span><span class="doc-org">РАНХиГС</span></span>
-</a>
-<a class="doc-card" href="assets/cert-schema.webp" target="_blank" rel="noopener">
-<span class="doc-frame"><img src="assets/cert-schema-thumb.webp" alt="Сертификат о прохождении курса «Схема-терапия», 32 академических часа, школа «Чистые когниции»" loading="lazy" width="900" height="634"></span>
-<span class="doc-meta"><span class="doc-year">2025</span><span class="doc-name">Курс «Схема-терапия» · 32 ак. часа</span><span class="doc-org">Чистые Когниции</span></span>
-</a>
-</div>
-</div>
+<section class="card blue quote" aria-label="Поддержка">
+<p class="quote-t" style="position:relative;z-index:2">Забота о себе — тоже работа. Начать можно с маленького шага.</p>
+<svg class="quote-art" viewBox="0 0 260 230" aria-hidden="true" style="width:min(62%,260px)">
+<g class="cr">
+<path d="M28 120 C28 180 80 214 130 214 C180 214 232 180 232 120 C210 150 172 162 130 162 C88 162 50 150 28 120 Z" fill="#A9BCEB"/>
+<ellipse cx="36" cy="116" rx="16" ry="12" fill="#A9BCEB" transform="rotate(-30 36 116)"/>
+<ellipse cx="224" cy="116" rx="16" ry="12" fill="#A9BCEB" transform="rotate(30 224 116)"/>
+<ellipse cx="130" cy="160" rx="56" ry="11" fill="#C9906F"/>
+<path d="M130 160 C130 130 133 110 130 84" fill="none" stroke="#8FAE80" stroke-width="6" stroke-linecap="round"/>
+<path d="M131 112 C150 92 178 96 182 108 C168 122 146 122 131 112 Z" fill="#A9C49B"/>
+<path d="M129 98 C110 78 82 82 78 94 C92 108 114 108 129 98 Z" fill="#A9C49B"/>
+<path d="M130 62 c-9-6-13-11-13-15 a6 6 0 0 1 13-2 a6 6 0 0 1 13 2 c0 4-4 9-13 15z" fill="#F6F0E6"/>
+</g>
+</svg>
 </section>
-
-<!-- ПРЕИМУЩЕСТВА -->
-<section aria-label="Принципы работы" style="position: relative; overflow: hidden; background: #D8DFCD">
-<div aria-hidden="true" class="deco-pr" style="position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: max(100%, 1000px); pointer-events: none; z-index: 0">
-<img src="assets/principles-branch.webp" alt="" class="pr-branch" style="position: absolute; top: 0; left: 0; width: 44%; display: block">
-<img src="assets/principles-vase.webp" alt="" class="pr-vase" style="position: absolute; bottom: 0; right: 0; width: 32%; display: block">
-</div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: clamp(56px, 11vw, 170px); background: linear-gradient(#FFFFFF, rgba(255,255,255,0)); pointer-events: none; z-index: 0"></div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: clamp(36px, 6vw, 90px); background: linear-gradient(rgba(255,255,255,0), #FFFFFF); pointer-events: none; z-index: 0"></div>
-<div class="pad-pr" style="max-width: 1360px; margin: 0 auto; padding: 280px 32px 360px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: center; position: relative; z-index: 1">
-<div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 48px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: 1.05; color: #2B2D1C; max-width: 760px">Психологическая помощь — это не слабость, а <em>забота о себе</em></h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
-<div style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D4027" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3"></path><path d="M7.5 15h9"></path></svg>
-<h3 style="margin: 0; font-size: 16px; font-weight: 600">Доказательные подходы</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49">Схема-терапия и КПТ — методы с подтверждённой эффективностью.</p>
-</div>
-<div style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D4027" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
-<h3 style="margin: 0; font-size: 16px; font-weight: 600">Полная конфиденциальность</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49">Всё, что вы рассказываете, остаётся между нами.</p>
-</div>
-<div style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D4027" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5M9 13h6M9 17h4"></path></svg>
-<h3 style="margin: 0; font-size: 16px; font-weight: 600">Прозрачные правила</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49">До начала работы вы получаете информированное согласие — как устроены наши встречи. <a href="https://drive.google.com/file/d/1RHoPeYV1MsGsc4jJUyTknxTIUj4RAplH/view?usp=sharing">Правила работы</a></p>
-</div>
-<div style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D4027" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg>
-<h3 style="margin: 0; font-size: 16px; font-weight: 600">Официальная оплата</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49">После каждой сессии я отправляю чек.</p>
-</div>
-</div>
-</div>
-<img src="assets/photo-principles.jpg" alt="Арина Шустовская" style="flex: 1 1 320px; max-width: 420px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px; position: relative; z-index: 1">
-</div>
-</section>
-
-<!-- ФОРМАТ И СТОИМОСТЬ -->
-<section id="format" style="max-width: 1360px; margin: 0 auto; padding: 112px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5C5F38">[ формат и стоимость ]</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(44px, 5vw, 76px); line-height: 1; color: #2B2D1C">Как мы можем <em>встретиться</em></h2>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5A49; max-width: 360px">Индивидуальная консультация длится 50 минут. Оплата — переводом не позднее чем за 24 часа до встречи.</p>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-<article style="background: #DCE3CC; border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600">Очно</h3>
-<span style="font-size: 14px; color: #3D4027">50 минут</span>
+<!-- ФОРМАТ -->
+<section class="card" id="format" aria-label="Формат и стоимость">
+<p class="kick">Формат и стоимость</p>
+<h2 class="h2">Как мы можем встретиться</h2>
+<div class="prices">
+<div class="price">
+<h3>Очно</h3>
+<svg viewBox="0 0 84 84" aria-hidden="true"><g class="cr"><circle cx="42" cy="42" r="40" fill="#F6F0E6"/><rect x="18" y="16" width="48" height="38" rx="6" fill="#A9BCEB"/><path d="M42 16v38M18 35h48" stroke="#F6F0E6" stroke-width="3"/><path d="M30 70h24l-3-12H33z" fill="#C9906F"/><path d="M42 58c0-8-6-12-10-12 0 6 4 10 10 12zm0 0c0-8 6-12 10-12 0 6-4 10-10 12z" fill="#8FAE80"/></g></svg>
+<p class="sum">2 500 ₽ <small>/ 50 минут</small></p>
+<p>Кабинет в центре Санкт-Петербурга: м. Маяковская, Сенная / Спасская / Садовая, Невский проспект — и другие по запросу.</p>
 </div>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 72px; line-height: 1; font-weight: 400; color: #2B2D1C">2 500 ₽</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.6">Уютный кабинет в центре Санкт-Петербурга: м. Маяковская, Сенная / Спасская / Садовая, Невский проспект — и другие по запросу.</p>
-<a href="http://t.me/ar1shust" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; background: #3D4027; color: #FFFFFF; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Записаться очно <span aria-hidden="true">→</span></a>
-</article>
-<article style="background: #FFFFFF; border: 1px solid rgba(43,45,28,0.18); border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-<h3 style="margin: 0; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600">Онлайн</h3>
-<span style="font-size: 14px; color: #3D4027">50 минут</span>
+<div class="price">
+<h3>Онлайн</h3>
+<svg viewBox="0 0 84 84" aria-hidden="true"><g class="cr"><circle cx="42" cy="42" r="40" fill="#F6F0E6"/><rect x="16" y="20" width="52" height="34" rx="5" fill="#1D66A6"/><rect x="21" y="25" width="42" height="24" rx="2" fill="#A9BCEB"/><path d="M10 58h64l-4 7H14z" fill="#8EA6DD"/><path d="M42 44c-5-3.4-7-6-7-8.4a3.5 3.5 0 0 1 7-1.2 3.5 3.5 0 0 1 7 1.2c0 2.4-2 5-7 8.4z" fill="#E09A7B"/></g></svg>
+<p class="sum">2 000 ₽ <small>/ 50 минут</small></p>
+<p>По видеосвязи из любой точки: Яндекс Телемост или Контур Толк.</p>
 </div>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 72px; line-height: 1; font-weight: 400; color: #2B2D1C">2 000 ₽</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.6">По видеосвязи из любой точки: Яндекс Телемост или Контур Толк.</p>
-<a href="http://t.me/ar1shust" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; background: #3D4027; color: #FFFFFF; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Записаться онлайн <span aria-hidden="true">→</span></a>
-</article>
 </div>
-
-<div style="display: flex; flex-wrap: wrap; gap: 12px 32px; padding: 20px 24px; border: 1px dashed rgba(43,45,28,0.3); border-radius: 16px; font-size: 14px; line-height: 1.6; color: #5F5A49">
-<strong style="color: #2B2D1C; font-weight: 600">Ограничения в работе:</strong>
-<span>работаю только с совершеннолетними (18+)</span>
-<span>не беру запросы при диагностированных химических зависимостях</span>
-</div>
+<p class="limits"><b>Ограничения:</b> работаю только с совершеннолетними (18+); не беру запросы при диагностированных химических зависимостях.</p>
 </section>
 
 <!-- ВОПРОСЫ -->
-<section id="faq" aria-label="Частые вопросы" style="background: #FFFFFF; border-top: 1px solid rgba(43,45,28,0.12)">
-<div style="max-width: 1360px; margin: 0 auto; padding: 104px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px 80px">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #5C5F38">[ вопросы ]</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.02; color: #2B2D1C">Что важно знать <em>заранее</em></h2>
-<img src="assets/photo-faq.jpg" alt="Арина Шустовская" style="display: block; width: 100%; max-width: 360px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px; margin-top: 12px">
-</div>
-<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(43,45,28,0.15)">
-<details open="" style="border-bottom: 1px solid rgba(43,45,28,0.15); padding: 24px 0">
-<summary style="display: flex; justify-content: space-between; gap: 24px; font-size: 19px; font-weight: 500; min-height: 44px; align-items: center">Как записаться? <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #5C5F38">+</span></summary>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #5F5A49; max-width: 680px">Напишите мне в Telegram или на почту. Укажите имя и кратко опишите запрос — тему, с которой хотите поработать. Мы согласуем удобное время.</p>
-</details>
-<details style="border-bottom: 1px solid rgba(43,45,28,0.15); padding: 24px 0">
-<summary style="display: flex; justify-content: space-between; gap: 24px; font-size: 19px; font-weight: 500; min-height: 44px; align-items: center">Как оплатить? <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #5C5F38">+</span></summary>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #5F5A49; max-width: 680px">Переводом на карту не позднее чем за 24 часа до сессии — это подтверждение нашей встречи. Чек я отправляю после сессии.</p>
-</details>
-<details style="border-bottom: 1px solid rgba(43,45,28,0.15); padding: 24px 0">
-<summary style="display: flex; justify-content: space-between; gap: 24px; font-size: 19px; font-weight: 500; min-height: 44px; align-items: center">Что будет на первой встрече? <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #5C5F38">+</span></summary>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #5F5A49; max-width: 680px">Мы познакомимся и в безопасной обстановке обсудим ваш запрос. Я помогу бережно прояснить детали и наметить возможные пути. А вы сможете прислушаться к себе и решить, комфортно ли вам со мной работать.</p>
-</details>
-</div>
-</div>
+<section class="card faq" id="faq" aria-label="Частые вопросы">
+<p class="kick">Вопросы</p>
+<h2 class="h2" style="margin-bottom:22px">Что важно знать заранее</h2>
+<details open><summary>Как записаться? <i aria-hidden="true">+</i></summary><p>Напишите мне в Telegram или на почту. Укажите имя и кратко опишите запрос — тему, с которой хотите поработать. Мы согласуем удобное время.</p></details>
+<details><summary>Как оплатить? <i aria-hidden="true">+</i></summary><p>Переводом на карту не позднее чем за 24 часа до сессии — это подтверждение нашей встречи. Чек я отправляю после сессии.</p></details>
+<details><summary>Что будет на первой встрече? <i aria-hidden="true">+</i></summary><p>Мы познакомимся и в безопасной обстановке обсудим ваш запрос. Я помогу бережно прояснить детали и наметить возможные пути. А вы сможете прислушаться к себе и решить, комфортно ли вам со мной работать.</p></details>
+<details><summary>Как устроена наша работа? <i aria-hidden="true">+</i></summary><p>Перед началом вы получаете документ, где прозрачно написано, как всё устроено. <a href="https://drive.google.com/file/d/1RHoPeYV1MsGsc4jJUyTknxTIUj4RAplH/view?usp=sharing">Правила работы</a></p></details>
 </section>
 
 <!-- КОНТАКТЫ -->
-<section id="contacts" style="position: relative; overflow: hidden; background: #D5D7C5; color: #2B2D1C">
-<div aria-hidden="true" class="deco-ct" style="position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: max(116%, 1000px); pointer-events: none; z-index: 0">
-<img src="assets/contacts-top.webp" alt="" style="position: absolute; top: 0; left: 0; width: 100%; display: block">
-</div>
-<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: clamp(56px, 11vw, 170px); background: linear-gradient(#FFFFFF, rgba(255,255,255,0)); pointer-events: none; z-index: 0"></div>
-<div class="pad-ct" style="max-width: 1360px; margin: 0 auto; padding: 300px 32px 120px; box-sizing: border-box; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 72px">
-<div style="display: flex; flex-wrap: wrap; gap: 48px 80px; align-items: flex-end">
-<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4C38">[ контакты ]</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(48px, 6vw, 92px); line-height: 0.98">Первый шаг —<br><em>просто написать</em></h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3F4130; max-width: 520px">Если остались вопросы — буду рада ответить.</p>
-</div>
-<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
-<a href="http://t.me/ar1shust" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 28px; background: #3D4027; color: #FFFFFF; border-radius: 999px; text-decoration: none; font-size: 16px"><span>Telegram · @ar1shust</span><span aria-hidden="true">→</span></a>
-<a href="mailto:arina.schustovskaya@yandex.ru" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 28px; background: #FFFFFF; color: #2B2D1C; border-radius: 999px; text-decoration: none; font-size: clamp(13px, 3.6vw, 16px); gap: 12px"><span style="white-space: nowrap">arina.schustovskaya@yandex.ru</span><span aria-hidden="true">→</span></a>
-<a href="https://www.b17.ru/shustovskaya_arina/" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 28px; background: #FFFFFF; color: #2B2D1C; border-radius: 999px; text-decoration: none; font-size: 16px"><span>Анкета на b17</span><span aria-hidden="true">→</span></a>
+<section class="card blue final" id="contacts" aria-label="Контакты">
+<div>
+<p class="kick">Контакты</p>
+<h2>Первый шаг — просто написать.<br>Вы не одни.</h2>
+<div class="links">
+<a class="main" href="http://t.me/ar1shust"><span>Telegram · @ar1shust</span><span aria-hidden="true">→</span></a>
+<a href="mailto:arina.schustovskaya@yandex.ru"><span>arina.schustovskaya@yandex.ru</span><span aria-hidden="true">→</span></a>
+<a href="https://www.b17.ru/shustovskaya_arina/"><span>Анкета на b17</span><span aria-hidden="true">→</span></a>
 </div>
 </div>
-</div>
+<svg class="plane" viewBox="0 0 420 300" aria-hidden="true">
+<g class="cr">
+<path d="M20 250 C90 270 140 200 120 170 C100 140 60 170 90 200 C120 230 200 220 240 170" fill="none" stroke="#8EA6DD" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 16"/>
+<path d="M240 160 L400 60 L330 250 L290 190 Z" fill="#F6F0E6"/>
+<path d="M240 160 L400 60 L290 190 Z" fill="#A9BCEB"/>
+<path d="M290 190 L300 236 L318 206 Z" fill="#8EA6DD"/>
+<path d="M60 60 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5 Z" fill="#C3B5E3"/>
+<circle cx="370" cy="270" r="8" fill="#E2B79C"/>
+</g>
+</svg>
 </section>
 
-<!-- ПОДВАЛ -->
-<footer class="site-footer">
-<div class="ftr-in">
-<div class="ftr-grid">
-<div class="ftr-col ftr-about">
-<p class="ftr-lead">Индивидуальные консультации для взрослых. Схема-терапия и КПТ — бережно, без оценок и честно.</p>
-<a href="http://t.me/ar1shust" class="ftr-cta">Записаться на консультацию <span aria-hidden="true">→</span></a>
-</div>
-<nav class="ftr-col" aria-label="Разделы сайта в подвале">
-<p class="ftr-h">Разделы</p>
-<a href="#approach">Подход</a>
-<a href="#about">Обо мне</a>
-<a href="#requests">Запросы</a>
-<a href="#docs">Документы</a>
-<a href="#format">Стоимость</a>
-<a href="#faq">Вопросы</a>
-</nav>
-<div class="ftr-col">
-<p class="ftr-h">Связь</p>
-<a href="http://t.me/ar1shust">Telegram · @ar1shust</a>
-<a href="mailto:arina.schustovskaya@yandex.ru">arina.schustovskaya@yandex.ru</a>
-<a href="https://www.b17.ru/shustovskaya_arina/">Анкета на b17</a>
-</div>
-<div class="ftr-col">
-<p class="ftr-h">Где принимаю</p>
-<p>Кабинет в центре Санкт-Петербурга: м. Маяковская, Сенная / Спасская / Садовая, Невский проспект</p>
-<p>Онлайн — Яндекс Телемост, Контур Толк</p>
-</div>
-</div>
-<p class="ftr-word" aria-hidden="true">Арина <em>Шустовская</em></p>
-<div class="ftr-bottom">
-<span>© 2026 Арина Шустовская, психолог</span>
+</main>
+
+<footer class="ftr">
+<span>© 2026 Арина Шустовская, психолог · Санкт-Петербург и онлайн</span>
 <a href="https://drive.google.com/file/d/1RHoPeYV1MsGsc4jJUyTknxTIUj4RAplH/view?usp=sharing">Правила работы</a>
 <a href="#top">[Политика конфиденциальности]</a>
 <a href="#top">Наверх ↑</a>
-</div>
-</div>
 </footer>
-
-</div>
 
 </body>
 </html>

@@ -4,6 +4,7 @@
 
 - `index.html` — вся страница (HTML + CSS, без сборки и зависимостей)
 - `assets/` — фото Арины с вырезанным фоном, декоративные фоны блоков
+- `policy/` — политика конфиденциальности
 
 Открыть локально: просто открыть `index.html` в браузере.
-Шрифты: Cormorant Garamond и Manrope (Google Fonts).
+Шрифты: Cormorant Garamond и Manrope (лежат в assets/fonts).

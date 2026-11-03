@@ -21,7 +21,12 @@ document.addEventListener('click', function (e) {
 var a = e.target.closest && e.target.closest('a[data-contact]');
 if (!a || typeof ym !== 'function') return;
 var goal = { tg: 'contact_telegram', mail: 'contact_email' }[a.dataset.contact];
-if (goal) ym(114017874, 'reachGoal', goal);
+if (!goal) return;
+if (performance.now() < 10000) {
+ym(114017874, 'reachGoal', goal + '_fast'); // быстрые клики считаем отдельно
+return;
+}
+ym(114017874, 'reachGoal', goal);
 }, true);
 </script>
 <meta name="description" content="Как психолог Арина Шустовская обрабатывает персональные данные посетителей сайта и клиентов.">
